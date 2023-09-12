@@ -1,2 +1,2 @@
-# cibersuguridadgrupoq
+# cibersuguridadgrupoa
 clase1
