@@ -1,7 +1,13 @@
-
 from pymongo.mongo_client import MongoClient
+from dotenv import load_dotenv
+import os
 
-uri = "mongodb+srv://aduque:Clave12345@cluster0.g4gozmk.mongodb.net/?retryWrites=true&w=majority"
+load_dotenv()
+
+user = os.getenv('MONGO_USER')
+passw = os.getenv('MONGO_PASS')
+
+uri = f"mongodb+srv://{user}:{passw}@cluster0.g4gozmk.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
